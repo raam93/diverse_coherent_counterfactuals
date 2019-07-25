@@ -23,6 +23,8 @@ class chris_diverse:
 
         self.exp.train_logistic(self.target[self.train_ind],self.train_ind)
 
+        self.exp.special_val={'workclass': {0: 'Government', -3: 'Other/Unknown', -2: 'Private', -1: 'Self-Employed'}, 'education': {0: 'Assoc', -7: 'Bachelors', -6: 'Doctorate', -5: 'HS-grad', -4: 'Masters', -3: 'Prof-school', -2: 'School', -1: 'Some-college'}, 'marital_status': {0: 'Divorced', -4: 'Married', -3: 'Separated', -2: 'Single', -1: 'Widowed'}, 'occupation': {0: 'Blue-Collar', -5: 'Other/Unknown', -4: 'Professional', -3: 'Sales', -2: 'Service', -1: 'White-Collar'}, 'race': {0: 'Other', -1: 'White'}, 'gender': {0: 'Female', -1: 'Male'}}
+
         scores = self.exp.evaluate_subset(self.test_ind)
         preds = []
         for s in scores:
