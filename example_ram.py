@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import ShuffleSplit
 from sklearn.metrics import accuracy_score
-from counterfactual import linear_explanation
+from counterfactual_chris2 import linear_explanation
 import pickle
 import timeit
 
